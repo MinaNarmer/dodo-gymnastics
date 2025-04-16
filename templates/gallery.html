@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+
+{% block title %}Diana Mina's Gymnastics Gallery{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="gallery-container">
+    <div class="page-title-container">
+        <h1 class="page-title">My Gallery</h1>
+        <div class="title-decoration">
+            <img src="{{ url_for('static', filename='images/star.svg') }}" alt="" class="title-star">
+        </div>
+    </div>
+
+    <div class="gallery-categories mb-4">
+        <button class="btn btn-category active" data-category="all">All Photos</button>
+        <button class="btn btn-category" data-category="training">Training</button>
+        <button class="btn btn-category" data-category="competitions">Competitions</button>
+        <button class="btn btn-category" data-category="fun">Fun Moments</button>
+    </div>
+
+    <div class="row gallery-grid">
+        <!-- Training Photos -->
+        <h3 class="text-center w-100 text-muted mb-3">My Training Moments</h3>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="training">
+            <a href="{{ url_for('static', filename='images/dodo-stretch.jpg') }}" data-lightbox="gallery" data-title="Stretching on the mat before warmup">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-stretch.jpg') }}" alt="Stretching" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">Stretching before warmup</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="training">
+            <a href="{{ url_for('static', filename='images/dodo-rope-training.jpg') }}" data-lightbox="gallery" data-title="Practicing rope routine at the club">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-rope-training.jpg') }}" alt="Rope Training" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">Practicing rope routine</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="training">
+            <a href="{{ url_for('static', filename='images/dodo-ball-focus.jpg') }}" data-lightbox="gallery" data-title="Ball routine drills">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-ball-focus.jpg') }}" alt="Ball Practice" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">Honoring with the team</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Competition Photos -->
+        <h3 class="text-center w-100 text-muted mb-3">Competitions & Podiums</h3>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="competitions">
+            <a href="{{ url_for('static', filename='images/dodo-gold-medal-1.jpg') }}" data-lightbox="gallery" data-title="Receiving gold at Amateur Nationals 2023">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-gold-medal-1.jpg') }}" alt="Gold Medal 2023" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">Gold Medal – Amateur Nationals 2023</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="competitions">
+            <a href="{{ url_for('static', filename='images/dodo-bronze-podium.jpg') }}" data-lightbox="gallery" data-title="Bronze medal podium – Egypt Cup 2024">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-bronze-podium.jpg') }}" alt="Bronze Podium" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">Bronze Podium – Egypt Cup 2024</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="competitions">
+            <a href="{{ url_for('static', filename='images/dodo-rope-performance.jpg') }}" data-lightbox="gallery" data-title="Mid-performance with rope at Pro U8">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-rope-performance.jpg') }}" alt="Rope Performance" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">Rope Performance – Pro U8</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="competitions">
+            <a href="{{ url_for('static', filename='images/dodo-team-photo.jpg') }}" data-lightbox="gallery" data-title="With teammates after competition">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-team-photo.jpg') }}" alt="Team Photo" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">With my team after competition</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Fun Moments Photos -->
+        <h3 class="text-center w-100 text-muted mb-3">Fun Moments</h3>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="fun">
+            <a href="{{ url_for('static', filename='images/dodo-birthday.jpg') }}" data-lightbox="gallery" data-title="Birthday celebration at the gym">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-birthday.jpg') }}" alt="Birthday at Gym" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">Birthday at the gym 🎂</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="fun">
+            <a href="{{ url_for('static', filename='images/dodo-friends.jpg') }}" data-lightbox="gallery" data-title="Laughing with teammates after training">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-friends.jpg') }}" alt="With Friends" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">With my friends after training</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="fun">
+            <a href="{{ url_for('static', filename='images/dodo-costume-day.jpg') }}" data-lightbox="gallery" data-title="Special costume day at practice">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-costume-day.jpg') }}" alt="Costume Day" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">Costume Day – Butterfly 🦋</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="fun">
+            <a href="{{ url_for('static', filename='images/dodo-parents-hug.jpg') }}" data-lightbox="gallery" data-title="Hug from Mama & Papa after a win">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-parents-hug.jpg') }}" alt="Hug from Parents" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">Hug from my parents after a win 🥰</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="fun">
+            <a href="{{ url_for('static', filename='images/dodo-dad-hug.jpg') }}" data-lightbox="gallery" data-title="Hug from Papa after a win">
+                <div class="gallery-card">
+                    <div class="gallery-img-container">
+                        <img src="{{ url_for('static', filename='images/dodo-dad-hug.jpg') }}" alt="Hug from Dad" class="img-fluid">
+                    </div>
+                    <div class="gallery-caption">Hug from my Dad after a win 🥰</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="no-items-message d-none">
+        <p>No photos in this category yet. Check back soon!</p>
+    </div>
+
+    <div class="gallery-note mt-5">
+        <div class="note-content">
+            <h3>A Note About My Photos</h3>
+            <p>These are some of my favorite moments from my gymnastics journey so far! I'm always adding new photos after competitions and special events. Check back soon to see more of my adventures!</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+{% endblock %}

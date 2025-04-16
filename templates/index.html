@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block title %}Diana Mina's Gymnastics World - Home{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="welcome-text">
+                <h1 class="display-4 animated-text">Hi! I'm Diana Mina</h1>
+                <h2 class="text-muted">7-Year-Old Rhythmic Gymnastics Champion</h2>
+                <p class="lead mt-4">Welcome to my sparkly world of ropes, hoops, balls, and dreams! Join me on my journey as I twirl, leap, and dance my way to gymnastics glory!</p>
+                <div class="mt-4">
+                    <a href="/about" class="btn btn-primary me-2">Learn About Me</a>
+                    <a href="/gallery" class="btn btn-secondary">See My Pictures</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="profile-image-container">
+                <div class="profile-image">
+                    <!-- Placeholder for Diana Mina's image -->
+                    <img src="{{ url_for('static', filename='images/diana.jpg') }}"
+                    alt="Diana Mina"
+                    class="img-fluid rounded-circle"
+                    style="width: 250px; height: 250px; object-fit: cover;">
+                    <div class="quote-bubble" style="top: -20px; left: 150px;">
+                        <p>"I love gymnastics because it makes me feel like I can fly!"</p>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fun-facts-container mt-5">
+        <h3 class="text-center mb-4">Fun Facts About Me</h3>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="fun-fact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>My Favorite Apparatus</h4>
+                    <p>Ribbon! I love making beautiful shapes in the air.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="fun-fact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h4>My Favorite Music</h4>
+                    <p>Disney songs and classical piano pieces.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="fun-fact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>When I'm Not Training</h4>
+                    <p>I love drawing cute things, playing with my dad, shopping with my mom, and talking and laughing with my big brother Adam!.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

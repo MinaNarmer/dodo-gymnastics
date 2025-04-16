@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+{% block title %}Diana Mina's Gymnastics Achievements{% endblock %}
+
+{% block content %}
+<div class="achievements-container">
+    <div class="page-title-container">
+        <h1 class="page-title">My Achievements</h1>
+        <p class="page-subtitle">These medals are more than metal — they’re memories of magic moments! ✨</p>
+                <div class="title-decoration">
+            <img src="{{ url_for('static', filename='images/star.svg') }}" alt="" class="title-star">
+            <img src="{{ url_for('static', filename='images/star.svg') }}" alt="" class="title-star">
+        </div>
+    </div>
+
+    <div class="medal-count-section mb-5">
+        <div class="row text-center">
+            <!-- Gold Medals -->
+            <div class="col-md-4 mb-3">
+                <div class="medal-counter gold">
+                    <div class="medal-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="medal-count">2</div>
+                    <div class="medal-type">Gold Medals</div>
+                    <p class="medal-description">🏆 Won in Amateur Championships</p>
+                </div>
+            </div>
+    
+            <!-- Silver Medal -->
+            <div class="col-md-4 mb-3">
+                <div class="medal-counter silver">
+                    <div class="medal-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="medal-count">1</div>
+                    <div class="medal-type">Silver Medal</div>
+                    <p class="medal-description">🥈 Professional Competition</p>
+                </div>
+            </div>
+    
+            <!-- Bronze Medal -->
+            <div class="col-md-4 mb-3">
+                <div class="medal-counter bronze">
+                    <div class="medal-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="medal-count">1</div>
+                    <div class="medal-type">Bronze Medal</div>
+                    <p class="medal-description">🥉 Professional Artistic Event</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="timeline-section">
+        <h2 class="text-center mb-4">My Gymnastics Journey Timeline</h2>
+        
+        <div class="timeline" id="achievements-timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>May 2022</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3>First Day of Gymnastics</h3>
+                        <p>I started my very first gymnastics class! I was a little nervous but so excited.</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>November 2022</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3>First Exhibition Performance</h3>
+                        <p>I performed my first routine in front of an audience at our gym's winter show!</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>December 2023</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3>First Gold Medal – Amateur Championship</h3>
+                        <p>In December 2023, I competed in my first amateur gymnastics championship and won my very first gold medal! It was such a special moment for me and my coach.</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>June 2024</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3>Second Gold Medal – Amateur National Championship</h3>
+                        <p>In June 2024, I competed in the Amateur National Championship (Republic Level) and proudly won my second gold medal. It was an amazing experience and a big step forward in my gymnastics journey!</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>January 2024</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3>First Professional Medal – Egyptian Rhythmic Cup</h3>
+                        <p>I won my first professional medal in January 2024! I earned a bronze medal at the Egyptian Rhythmic Gymnastics Cup (Free Style) in the under-8 category. It was a big moment for me and my family!</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-trophy" style="color: #cd7f32;"></i> <!-- Bronze-style -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <span>April 2025</span>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <h3>First Silver Medal – Professional National Championship</h3>
+                        <p>In April 2025, I won my first silver medal in a professional rhythmic gymnastics championship! It was the National Championship for under-8 girls, and I performed with the rope. I felt so proud and excited!</p>
+                        <div class="timeline-icon">
+                            <i class="fas fa-medal" style="color: silver;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="special-awards mt-5">
+        <h2 class="text-center mb-4">Special Awards</h2>
+        <div class="row">
+            <!-- Rising Star Award -->
+            <div class="col-md-4 mb-4">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Rising Star Award</h3>
+                    <p>Awarded by the Regional Gymnastics Association in 2022 for demonstrating great potential and passion at a very young age during her early performances.</p>
+                </div>
+            </div>
+    
+            <!-- Spirit of Gymnastics -->
+            <div class="col-md-4 mb-4">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Spirit of Gymnastics</h3>
+                    <p>Recognized at the Winter Wonderland Competition 2023 for her dedication, joyful energy, and love for rhythmic gymnastics shown throughout the event.</p>
+                </div>
+            </div>
+    
+            <!-- Most Improved -->
+            <div class="col-md-4 mb-4">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Most Improved</h3>
+                    <p>Presented by her gymnastics club in 2023 after her hard work and noticeable improvement in techniques, discipline, and performance quality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="whats-next mt-5">
+        <div class="whats-next-content">
+            <h2>What's Next for Me?</h2>
+            <p>I'm now training 5 days a week to prepare for my upcoming Spring Championship, where I'll debut my brand new <strong>ball routine</strong> and show everything I’ve learned so far!</p>
+            <p>My coach and I are also building a powerful new <strong>ribbon routine</strong> to qualify for the <strong>National Junior Championship</strong>.</p>
+            <p>But my biggest dream? To proudly represent my country at the <strong>International Children's Games</strong> next year – and bring home another medal!</p>
+            <div class="text-center mt-4">
+                <a href="/gallery" class="btn btn-primary">See My Training Photos</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/achievements.js') }}"></script>
+{% endblock %}
